@@ -1,20 +1,18 @@
-#include <algorithm>
+#include <conio.h>
 
-void reverse(int* ps, int size)
+void print(const char* s)
 {
-	for (int* e = ps + size - 1; ps < e; ps++, e--)
+	for (; *s != 0; s++)
 	{
-		//std::swap(*ps, *e);
-		int temp = *ps;
-		*ps = *e;
-		*e = temp;
+		_putch(*s);
 	}
 }
 
 int main()
 {
-	int array[] = { 5,6,7,8,9 };
-	reverse(array, 5);
+	char msg[] = "yet";
+	print(msg);
 
+	while (!_kbhit);
 	return 0;
 }
